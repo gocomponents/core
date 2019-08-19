@@ -2,9 +2,9 @@ package grpc
 
 import (
 	"context"
-	"core/proto"
 	"fmt"
 	"github.com/BurntSushi/toml"
+	"github.com/gocomponents/core/proto"
 	"google.golang.org/grpc"
 	"net"
 	"os"

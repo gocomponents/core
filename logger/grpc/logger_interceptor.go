@@ -2,9 +2,9 @@ package grpc
 
 import (
 	"context"
-	"core/util"
 	"encoding/json"
 	"fmt"
+	"github.com/gocomponents/core/util"
 	"google.golang.org/grpc"
 	"time"
 )

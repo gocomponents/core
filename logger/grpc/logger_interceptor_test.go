@@ -2,8 +2,8 @@ package grpc
 
 import (
 	"context"
-	"core/proto"
 	"fmt"
+	"github.com/gocomponents/core/proto"
 	"google.golang.org/grpc"
 	"net"
 	"testing"
