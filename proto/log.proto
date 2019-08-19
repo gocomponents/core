@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package proto;
+
+//TODO 采用双向流优化
+service LogStash {
+    rpc Send (Log) returns (Response) {}
+}
+
+message Log {
+    string app = 1;//应用名称
+    string module = 2 ;
+    enum Level{
+        UnKnown=0;
+        Info=1;
+        Debug=2;
+        Warning=3;
+        Error=4;
+    }
+    Level level = 3;//日志级别，1->info，2->debug，3->warning，4->error
+    string trace_id = 4;
+    string message = 5;
+    string exception = 6;
+    string user_ip = 7;
+    int32 exec_time = 8;//执行时间
+    string create_time = 9;
+}
+
+message Response {
+    int32 error_code = 1;
+    string message = 2;
+}
