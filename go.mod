@@ -1,4 +1,4 @@
-module core
+module github.com/gocomponents/core
 
 go 1.12
 
